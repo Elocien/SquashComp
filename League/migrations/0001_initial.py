@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('player_name', models.CharField(max_length=100)),
                 ('player_telefone_number', models.DecimalField(decimal_places=0, max_digits=12)),
-                ('player_group', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='comp.group')),
+                ('player_group', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='League.group')),
             ],
         ),
     ]

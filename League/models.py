@@ -3,11 +3,10 @@ from django.db.models.deletion import CASCADE
 
 
 class Group(models.Model):
-    group_number = models.DecimalField(
-        decimal_places=0, max_digits=2, name="group_number")
+    groupName = models.CharField(max_length=200)
 
     def __str__(self):
-        return "group_number: " + str(self.group_number)
+        return "groupName: " + str(self.groupName)
 
 
 

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'comp.apps.CompConfig',
+    'League.apps.LeagueConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SquashCompetitionSite.urls'
+ROOT_URLCONF = 'ClubLeagueSite.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SquashCompetitionSite.wsgi.application'
+WSGI_APPLICATION = 'ClubLeagueSite.wsgi.application'
 
 
 # Database
