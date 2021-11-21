@@ -1,0 +1,55 @@
+{% extends "league/base.html" %}
+{% load static %}
+
+{% block head_css %}
+	<link rel="stylesheet" type="text/css" href="{% static "league/match_score.css" %}"/>
+{%endblock head_css %}
+
+{%block content %}
+	{% if user.is_authenticated %}
+		<form class="form-style-9">
+			<ul>
+			<li>
+				<label>Opponent: </label>
+				<select name="player2" class="" placeholder="Opponent">
+					<option value="Locien">Locien</option>
+					<option value="Locien">Mathias</option>
+					<option value="Locien">Juan</option>
+					<option value="Locien">Robert</option>
+				</select>
+			</li>
+			<li>
+				<h1>Match Score</h1><br />
+				<label>You: </label>
+				<input type="text" name="yourScore" class="match-score" placeholder="0" /><br />
+				<label>Opponent: </label>
+				<input type="text" name="opponentScore" class="match-score" placeholder="0" />
+			</li>
+			<li>
+				<h1>Game Score</h1><br />
+				<label>Game 1: </label>
+				<input type"text" name="game1-player1Score" placeholder="0" />
+				<input type"text" name="game1-player2Score" placeholder="0" /><br />
+				<label>Game 2:</label>
+				<input type"text" name="game2-player1Score" placeholder="0" />
+				<input type"text" name="game2-player2Score" placeholder="0" /><br />
+				<label>Game 3:</label>
+				<input type"text" name="game3-player1Score" placeholder="0" />
+				<input type"text" name="game3-player2Score" placeholder="0" /><br />
+				<label>Game 4:</label>
+				<input type"text" name="game4-player1Score" placeholder="0" />
+				<input type"text" name="game4-player2Score" placeholder="0" /><br />
+				<label>Game 5:</label>
+				<input type"text" name="game5-player1Score" placeholder="0" />
+				<input type"text" name="game5-player2Score" placeholder="0" /><br />
+			</li>
+			<li>
+			<input type="submit" value="Submit" />
+			</li>
+			</ul>
+		</form>
+	{% else %}
+		<p>You are not logged in</p>
+		<a href="{% url 'login' %}">Log In</a>
+	{% endif %}
+{% endblock content %}

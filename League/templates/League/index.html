@@ -1,126 +1,86 @@
-{% block title %}Dresden Inter Club Squash League{% endblock %}
+{% extends "league/base.html" %}
+{% load static %}
+
+{% block head_css %}
+	<link rel="stylesheet" type="text/css" href="{% static "league/table.css" %}"/>
+{%endblock head_css %}
 
 {% block content %}
 
+<section class="wrapper">
 {% if user.is_authenticated %}
 	Hi {{ user.username}}!
 	<p><a href="{% url 'logout' %}">Log Out</a></p>
 <h1>Group A</h1>
-<table border="1px solid #FF0000">
-	<tr>
-		<th href=""/>
-		<th width='100px'>Fernando</th>
-		<th width='100px'>Locien</th>
-		<th width='100px'>Mathias</th>
-		<th width='100px'>Juan</th>
-	</tr>
-	<tr>
-		<th width='100px'>Fernando</th>
-		<th width='100px'>&nbsp;</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Locien</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Mathias</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Juan</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-	</tr>
-</table>
-<h1>Group B</h1>
-<table border="1px solid #FF0000">
-	<tr>
-		<th />
-		<th width='100px'>Daniel</th>
-		<th width='100px'>David</th>
-		<th width='100px'>Robert</th>
-		<th width='100px'>Ana</th>
-	</tr>
-	<tr>
-		<th width='100px'>Daniel</th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>David</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Robert</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Ana</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-	</tr>
-</table>
-<h1>Group C</h1>
-<table border="1px solid #FF0000">
-	<tr>
-		<th />
-		<th width='100px'>Mohammad</th>
-		<th width='100px'>Abhi</th>
-		<th width='100px'>Eric</th>
-		<th width='100px'>SomeGuy</th>
-	</tr>
-	<tr>
-		<th width='100px'>Mohammad</th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Abhi</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>Eric</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-	</tr>
-	<tr>
-		<th width='100px'>SomeGuy</th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'><a href="#">&nbsp;</a></th>
-		<th width='100px'></th>
-	</tr>
-</table>
+  <div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">Fernando</th>
+								<th class="column100 column3" data-column="column3">Locien</th>
+								<th class="column100 column4" data-column="column4">Mathias</th>
+								<th class="column100 column5" data-column="column5">Juan</th>
+								<th class="column100 column6" data-column="column6">Robert</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row100">
+								<th class="column100 column1" data-column="column1">Fernando</th>
+								<td class="column100 column2" data-column="column2">xx</td>
+								<td class="column100 column3" data-column="column3"><a href="/league/score">--</ a></td>
+								<td class="column100 column4" data-column="column4"><a href="#">--</ a></td>
+								<td class="column100 column5" data-column="column5"><a href="#">--</ a></td>
+								<td class="column100 column6" data-column="column6"><a href="#">--</ a></td>
+							</tr>
+
+							<tr class="row100">
+								<th class="column100 column1" data-column="column1">Locien</th>
+								<td class="column100 column2" data-column="column2"><a href="#">--</ a></td>
+								<td class="column100 column3" data-column="column3">xx</td>
+								<td class="column100 column4" data-column="column4"><a href="#">--</ a></td>
+								<td class="column100 column5" data-column="column5"><a href="#">--</ a></td>
+								<td class="column100 column6" data-column="column6"><a href="#">--</ a></td>
+							</tr>
+
+							<tr class="row100">
+								<th class="column100 column1" data-column="column1">Mathias</th>
+								<td class="column100 column2" data-column="column2"><a href="#">--</ a></td>
+								<td class="column100 column3" data-column="column3"><a href="#">--</ a></td>
+								<td class="column100 column4" data-column="column4">xx</td>
+								<td class="column100 column5" data-column="column5"><a href="#">--</ a></td>
+								<td class="column100 column6" data-column="column6"><a href="#">--</ a></td>
+							</tr>
+
+							<tr class="row100">
+								<th class="column100 column1" data-column="column1">Juan</th>
+								<td class="column100 column2" data-column="column2"><a href="#">--</ a></td>
+								<td class="column100 column3" data-column="column3"><a href="#">--</ a></td>
+								<td class="column100 column4" data-column="column4"><a href="#">--</ a></td>
+								<td class="column100 column5" data-column="column5">xx</td>
+								<td class="column100 column6" data-column="column6"><a href="#">--</ a></td>
+							</tr>
+
+							<tr class="row100">
+								<th class="column100 column1" data-column="column1">Robert</th>
+								<td class="column100 column2" data-column="column2"><a href="#">--</ a></td>
+								<td class="column100 column3" data-column="column3"><a href="#">--</ a></td>
+								<td class="column100 column4" data-column="column4"><a href="#">--</ a></td>
+								<td class="column100 column5" data-column="column5"><a href="#">--</ a></td>
+								<td class="column100 column6" data-column="column6">xx</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 {% else %}
 	<p>You are not logged in</p>
 	<a href="{% url 'login' %}">Log In</a>
 {% endif %}
 {% endblock %}
+</ section>
