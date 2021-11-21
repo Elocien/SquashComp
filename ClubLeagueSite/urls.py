@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('league/', include('League.urls')),
     path('admin/', admin.site.urls),
+	path('league/', include('django.contrib.auth.urls')),
+	path('league/', include('League.urls')),
 ]
